@@ -1,0 +1,616 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>搜索结果</title>
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .page {
+            margin-top: 40px;
+            margin-left: 100px;
+        }
+
+        .sidebar {
+            width: 350px;
+            background: white;
+            border-radius: 18px;
+            box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+            padding: 0px 0px 0px 20px;
+            transition: opacity 0.3s ease;
+        }
+
+        .sidebar.initial {
+            position: fixed;
+            top: 150px;
+            right: calc(50% - 600px);
+        }
+
+        .sidebar.sticky {
+            position: fixed;
+            top: 20px;
+            right: calc(50% - 600px);
+        }
+
+        .sidebar.hidden {
+            opacity: 0;
+            pointer-events: none;
+        }
+
+        .container {
+            display: flex;
+            align-items: flex-start;
+        }
+
+        .title-image {
+            margin-left: 15px;
+            margin-top: 38px;
+            margin-right: 15px;
+            width: 20px;
+            height: auto;
+            flex-shrink: 0;
+        }
+
+        .icon-left {
+            margin-left: 15px;
+            margin-top: 13px;
+            margin-right: 15px;
+            width: 20px;
+            height: 20px;
+            flex-shrink: 0;
+        }
+
+        .image-left {
+            margin-top: 17px;
+            margin-right: 20px;
+            width: 250px;
+            height: 141px;
+            flex-shrink: 0;
+            border-radius: 11px;
+        }
+
+        .image-right {
+            margin-left: 70px;
+            margin-top: 25px;
+            margin-right: 25px;
+            width: auto;
+            height: 100px;
+            flex-shrink: 0;
+        }
+
+        .toptitle {
+            font-size: medium;
+        }
+
+        .topcontent {
+            font-size: small;
+        }
+
+        .texttitle {
+            font-size: medium;
+        }
+
+        .textcontent {
+            font-size: small;
+            margin-left: 13px;
+        }
+
+        .moreframe {
+            margin-top: 5px;
+            margin-bottom: 30px;
+        }
+
+        .moresearch {
+            background-color: whitesmoke;
+            border-radius: 25px;
+            padding: 10px 100px 13px 30px;
+            font-weight: 500;
+            margin-left: 10px;
+            margin-right: 10px;
+        }
+
+        .dictionary {
+            border-style: solid;
+            border-color: whitesmoke;
+            padding: 6px 0px 26px 42px;
+            border-radius: 13px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <img src="SEARCH.png" alt="search" class="title-image">
+        <h1>Bad Apple!!</h1>
+    </div>
+    <p></p>
+    <hr>
+    <p></p>
+    <div class="container">
+        <div class="page">
+            <div class="container">
+                <img src="BAIDUICON.png" alt="baidu" class="icon-left">
+                <div>
+                    <span class="toptitle">百度百科</span><br>
+                    <span class="topcontent">https://baike.baidu.com > item > Bad Apple!!</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://baike.baidu.com/item/Bad%20Apple%21%21/64745447" class="texttitle">
+                        Bad Apple!!_百度百科
+                    </a><br>
+                    <span class="textcontent">
+                        《Bad Apple!!》是由nomico演唱的同人歌曲，由Haruka作词，Masayoshi<br>
+                        &nbsp;&nbsp;&nbsp;Minoshima编曲，改编自上海爱丽丝幻乐团成员ZUN为弹幕游戏《东方幻想乡<br>
+                        &nbsp;&nbsp;&nbsp;～ Lotus Land Story.》创作的原声音乐《Bad Apple!!》
+                    </span>
+                </p>
+                <img src="BADAPPLE.webp" alt="badapple" class="image-right">
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="MOEGIRL.png" alt="moegirl" class="icon-left">
+                <div>
+                    <span class="toptitle">moegirl</span><br>
+                    <span class="topcontent">https://moegirl.uk > index.php</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://moegirl.uk/index.php?title=Bad_Apple&variant=zh-hk" class="texttitle">
+                        Bad Apple!! feat.nomico - 萌娘百科
+                    </a><br>
+                    <span class="textcontent">
+                        2025年9月4日 · Bad Apple!! feat.nomico是由同人社團Alstroemeria Records<br>
+                        &nbsp;&nbsp;&nbsp;所創作的東方Project原曲改編歌曲，收錄於在第四回博麗神社例大祭發售的<br>
+                        &nbsp;&nbsp;&nbsp;《Lovelight》專輯中。
+                    </span>
+                </p>
+                <img src="Bad_Apple.png" alt="badapple" class="image-right">
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="SOUGOU.png" alt="sougou" class="icon-left">
+                <div>
+                    <span class="toptitle">搜狗百科</span><br>
+                    <span class="topcontent">https://baike.sougou.com</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://baike.sogou.com/v7569022.htm" class="texttitle">
+                        bad apple - 搜狗百科
+                    </a><br>
+                    <span class="textcontent">
+                        2024年9月28日 · 《bad apple》是一首日语原声歌曲，由nomico演唱，原曲出自<br>
+                        &nbsp;&nbsp;&nbsp;东方幻想乡的3面道中曲。该歌曲在nico上获得了广泛的好评和走红，被称为神作...
+                    </span>
+                </p>
+                <img src="BadAppleSougou.webp" alt="badapple" class="image-right">
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="OTOMAD.png" alt="otomad" class="icon-left">
+                <div>
+                    <span class="toptitle">otomad.wiki</span><br>
+                    <span class="topcontent">https://otomad.wiki > Bad_Apple!!</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://otomad.wiki/Bad_Apple!!" class="texttitle">
+                        Bad Apple!! - 中文音MAD维基 OtomadWiki
+                    </a><br>
+                    <span class="textcontent">
+                        2020年12月27日 · Bad Apple!! 是由同人社团 Alstroemeria Records 于 2007 年基于<br>
+                        &nbsp;&nbsp;&nbsp;Bad Apple!! 改编的一首歌曲。 在 2009 年以该曲为 BGM ，由 あにら制作的《 【东方】<br>
+                        &nbsp;&nbsp;&nbsp;Bad Apple!! ＰＶ【影絵】 》迅速走红，一举成为 Niconico上播放量最高的视频。
+                    </span>
+                </p>
+                <img src="OTOMADBADAPLLE.webp" alt="badapple" class="image-right">
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="THBWIKI.png" alt="thbwiki" class="icon-left">
+                <div>
+                    <span class="toptitle">thbwiki</span><br>
+                    <span class="topcontent">https://thbwiki.cc > Bad_Apple!!</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://thbwiki.cc/Bad_Apple!!" class="texttitle">
+                        Bad Apple!! - THBWiki · 专业性的东方Project维基百科
+                    </a><br>
+                    <span class="textcontent">
+                        2025年9月8日 · 其他资料 乐理资讯 分析考据 Bad Apple!! Bad Apple!! Bad Apple 烂苹果。 俗语中有“近墨者黑”的<br>
+                        &nbsp;&nbsp;&nbsp;含义。 从“馆”中涌现的魔力激起了众多恶灵的活动。 害群之马。 散布坏影响的人；（带坏好人的）坏家伙；害群之马。<br>
+                        &nbsp;&nbsp;&nbsp;可能指有人将恶灵放出导致这扰乱了东之国的秩序。 黄泉国？ 三面的场景为“幽冥”，似乎与黄泉国有联系？
+                    </span>
+                </p>
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="WIKIWAND.png" alt="wikiwand" class="icon-left">
+                <div>
+                    <span class="toptitle">Wikiwand</span><br>
+                    <span class="topcontent">https://www.wikiwand.com > zh-cn > articles > Bad_Apple!!</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://www.wikiwand.com/zh-cn/articles/Bad_Apple!!" class="texttitle">
+                        Bad Apple!! - Wikiwand
+                    </a><br>
+                    <span class="textcontent">
+                        2022年1月24日 · 《Bad Apple!!》原为东方Project在PC-98平台发布的旧作《东方幻想乡 ～ Lotus<br>
+                        &nbsp;&nbsp;&nbsp;Land Story.》的三面道中背景音乐，知名于根据该曲改编的《Bad Apple!! feat.nomico》和基于 …
+                    </span>
+                </p>
+            </div>
+
+            <p><br></p>
+
+            <div class="dictionary" style="width: 610px">
+                <p class="texttitle" style="font-size: larger;">
+                    <a href="https://cn.bing.com/dict/search?q=bad%20apple&FORM=BDVSP2&qpvt=bad+apple">
+                        bad apple - 词典
+                    </a>
+                </p>
+                <p class="textcontent" style="color: grey;">
+                    网络&nbsp;&nbsp;&nbsp;坏家伙；坏苹果；坏蛋
+                </p>
+                <p class="textcontent" style="color: grey;">
+                    变形&nbsp;&nbsp;&nbsp;复数：bad apples；
+                </p>
+                <a href="https://cn.bing.com/dict/search?q=bad%20apple&FORM=BDVSP2" class="textcontent">
+                    查看更多释义
+                </a>
+            </div>
+
+            <p><br></p>
+
+            <h3>Bad Apple 的视频 ></h3>
+            <hr align="left" width="250px" color="whitesmoke">
+            <div class="container">
+                <img src="ULTRAHD.jpg" alt="4K90fps-full-color" class="image-left">
+                <p>
+                    <a href="https://www.bilibili.com/video/BV1pi4y147nF/" class="texttitle">
+                        【4K/90fps/全彩色】Bad Apple,你从未见过的清晰流畅
+                    </a><br><br><br><br>
+                    <span class="toptitle">bilibili · ExhYZ</span><br>
+                    <span class="topcontent">已浏览 535.1万 次 · 2020年5月15日</span>
+                </p>
+            </div>
+            <br>
+            <div class="container">
+                <img src="FPS144.jpg" alt="4K144fps" class="image-left">
+                <p>
+                    <a href="https://www.bilibili.com/video/BV1NK4y1t7M9/" class="texttitle">
+                        【4K/144fps】Bad Apple 2,你从未见过的清晰流畅
+                    </a><br><br><br><br>
+                    <span class="toptitle">bilibili · ExhYZ</span><br>
+                    <span class="topcontent">已浏览 39.4万 次 · 2020年5月11日</span>
+                </p>
+            </div>
+            <br>
+            <div class="container">
+                <img src="FPS60.jpg" alt="4K960fps" class="image-left">
+                <p>
+                    <a href="https://www.bilibili.com/video/av466474167/" class="texttitle">
+                        【4K 60FPS】(全站最清晰画质/音频修复)Bad <br>
+                        apple！！！坏苹果！！！
+                    </a><br><br><br>
+                    <span class="toptitle">bilibili · 蒴奈</span><br>
+                    <span class="topcontent">已浏览 587.6万次 · 2022年2月9日</span>
+                </p>
+            </div>
+            <br>
+            <div class="container">
+                <img src="SOUHUBADAPPLE.jpg" alt="original" class="image-left">
+                <p>
+                    <a href="https://tv.sohu.com/v/dXMvMjI5MjI0ODI4LzczNDQxMDYzLnNodG1s.html" class="texttitle">
+                        Bad Apple 原版
+                    </a><br><br><br><br>
+                    <span class="toptitle">sohu · 小狐狸229224828</span><br>
+                    <span class="topcontent">2014年8月30日</span>
+                </p>
+            </div>
+            <hr align="left" width="250px" color="whitesmoke">
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="BILIBILI.png" alt="bilibili" class="icon-left">
+                <div>
+                    <span class="toptitle">哔哩哔哩</span><br>
+                    <span class="topcontent">https://www.bilibili.com > video</span>
+                </div>
+            </div>
+            <p>
+                <a href="https://www.bilibili.com/video/BV1aLshehErW/" class="texttitle">
+                    Bad Apple!!完整版本-中日双语字幕 ＆ 出场角色介绍_哔哩哔哩
+                </a>
+            </p>
+            <div class="container">
+                <img src="VIDEO1.jpg" alt="videoheading" class="image-left">
+                <p class="textcontent">
+                    2024年11月28日 · 完整版再次重现，【Bad Apple!!】完整<br>
+                    版本-中日双语字幕·出场角色介绍（重制），这是一个超严<br>
+                    肃的bad apple教学视频！！！，【中日双语字幕填坑】
+                    <br><br><br>
+                    作者：植松菊苗&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看次数 10,725
+                </p>
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="BILIBILI.png" alt="bilibili" class="icon-left">
+                <div>
+                    <span class="toptitle">哔哩哔哩</span><br>
+                    <span class="topcontent">https://www.bilibili.com > video</span>
+                </div>
+            </div>
+            <p>
+                <a href="https://www.bilibili.com/video/BV16Y411K7Kk/" class="texttitle">
+                    BAD APPLE！！完整版带字幕和人物说明_哔哩哔哩_bilibili
+                </a>
+            </p>
+            <div class="container">
+                <img src="VIDEO2.jpg" alt="videoheading" class="image-left">
+                <p class="textcontent">
+                    2022年6月11日 · 把上一个视频加入了人物称号名字说明<br>
+                    和中日文歌词字幕, 视频播放量 83767、弹幕量 207、点赞<br>
+                    数 3909、投硬币枚数 773、收藏人数 4178、转发人数101
+                    <br><br><br>
+                    作者：只是一般路过的小石&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;查看次数 83,850
+                </p>
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="BILIBILI.png" alt="bilibili" class="icon-left">
+                <div>
+                    <span class="toptitle">哔哩哔哩</span><br>
+                    <span class="topcontent">https://www.bilibili.com > opus</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://www.bilibili.com/opus/830060845811630214" class="texttitle">
+                        【东方鉴赏系列特别篇】你真的看懂Bad Apple了吗？
+                    </a><br>
+                    <span class="textcontent">
+                        2023年8月16日 · Bad Apple封面 伴随着动感的鼓点，首先摇摇晃晃地出场的第一<br>
+                        &nbsp;&nbsp;&nbsp;个角色是乐园的巫女——博丽灵梦，镜头先是拉远，再是拉近，对她拿起苹果做出<br>
+                        &nbsp;&nbsp;&nbsp;要咬一口的动作进行了特写，但她并没有咬下去，而是转手把苹果仍上天。
+                    </span>
+                </p>
+                <img src="BILIBILIBADAPPLE.webp" alt="badapple" class="image-right">
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="WANGYIYUN.png" alt="wangyiyun" class="icon-left">
+                <div>
+                    <span class="toptitle">网易音乐</span><br>
+                    <span class="topcontent">https://music.163.com > song</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://music.163.com/song?id=22645196" class="texttitle">
+                        Bad Apple!!（坏苹果！！） - のみこ - 单曲 - 网易云音乐
+                    </a><br>
+                    <span class="textcontent">
+                        歌曲名《Bad Apple!!》，别名《坏苹果！！》，由 のみこ 演唱，收录于《Lovelight》<br>
+                        专辑中。《Bad Apple!!》下载，《Bad Apple!!》在线试听，更多 …
+                    </span>
+                </p>
+                <img src="WANGYIYUNBADAPPLE.webp" alt="badapple" class="image-right" style="border-radius: 15px;">
+            </div>
+
+            <p><br></p>
+
+            <div class="container">
+                <img src="WANGYIYUN.png" alt="wangyiyun" class="icon-left">
+                <div>
+                    <span class="toptitle">网易音乐</span><br>
+                    <span class="topcontent">https://music.163.com > playlist</span>
+                </div>
+            </div>
+            <div class="container">
+                <p>
+                    <a href="https://music.163.com/playlist?id=2215443938" class="texttitle">
+                        Bad Apple!! (坏苹果) [全版本收录] - 歌单 - 网易云音乐
+                    </a><br>
+                    <span class="textcontent">
+                        2018年5月6日 · Becausesheexists创建的歌单《Bad Apple!! (坏苹果) [全版本收<br>
+                        录]》，标签：日语、电子，简介：第一首为原曲。更多相关热门精选歌单推荐 …
+                    </span>
+                </p>
+                <img src="WANGYIYUNBADAPPLE.webp" alt="badapple" class="image-right" style="border-radius: 15px;">
+            </div>
+
+            <p><br></p>
+
+            <div id="bottom">
+                <h3>深入了解 bad apple</h3>
+                <p class="moreframe">
+                    <span class="moresearch">
+                        🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                        apple下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                    <span class="moresearch">
+                        🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                        apple歌词&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </p>
+                <p class="moreframe">
+                    <span class="moresearch">
+                        🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                        apple漫画&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                    <span class="moresearch">
+                        🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                        apple病毒&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </p>
+                <p class="moreframe">
+                    <span class="moresearch">
+                        🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                        apple韩漫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                    </span>
+                    <span class="moresearch">
+                        🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad apple罗马音&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    </span>
+                </p>
+                <p class="moreframe">
+                    <span class="moresearch">
+                        🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad apple时什么梗
+                    </span>
+                    <span class="moresearch">
+                        🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad apple视频下载
+                    </span>
+                </p>
+                <p><br></p>
+                <p>
+                    <span class="topcontent">
+                        &nbsp;&nbsp;&nbsp;为回应符合本地法律要求的通知，部分搜索结果未予显示。有关详细信息，请参阅
+                        <a href="http://go.microsoft.com/fwlink/?LinkID=617350">此处</a>。
+                    </span>
+                    <hr color="whitesmoke" align="left" width="550px">
+                    <span class="topcontent">&nbsp;&nbsp;&nbsp;一些您可能无法访问的结果已被隐去。</span>
+                </p>
+            </div>
+        </div>
+
+        <div class="sidebar initial">
+            <h3>深入了解 bad apple</h3>
+            <p class="moreframe">
+                <span class="moresearch">
+                    🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                    apple下载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </p>
+            <p class="moreframe">
+                <span class="moresearch">
+                    🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                    apple歌词&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </p>
+            <p class="moreframe">
+                <span class="moresearch">
+                    🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                    apple漫画&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </p>
+            <p class="moreframe">
+                <span class="moresearch">
+                    🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                    apple病毒&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </p>
+            <p class="moreframe">
+                <span class="moresearch">
+                    🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad
+                    apple韩漫&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </p>
+            <p class="moreframe">
+                </span>
+                <span class="moresearch">
+                    🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad apple罗马音&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                </span>
+            </p>
+            <p class="moreframe">
+                <span class="moresearch">
+                    🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad apple时什么梗
+                </span>
+            </p>
+            <p class="moreframe">
+                <span class="moresearch">
+                    🔍&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;bad apple视频下载
+                </span>
+            </p>
+        </div>
+    </div>
+
+    <script>
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var sidebar = document.querySelector('.sidebar');
+            var bottomRelated = document.querySelector('#bottom');
+            var container = document.querySelector('.container');
+
+            function calculateThresholds() {
+                var initialTop = 19;
+
+                var sidebarInitialTop = sidebar.offsetTop;
+
+                return {
+                    stickyThreshold: sidebarInitialTop - initialTop,
+                    bottomThreshold: bottomRelated.offsetTop - window.innerHeight
+                };
+            }
+
+            function handleScroll() {
+                var scrollY = window.scrollY;
+                var thresholds = calculateThresholds();
+
+                sidebar.classList.remove('sticky', 'hidden');
+
+                if (scrollY >= thresholds.stickyThreshold) {
+                    sidebar.classList.add('sticky');
+                }
+                else {
+                    sidebar.classList.remove('sticky');
+                    sidebar.classList.add('initial');
+                }
+
+                if (scrollY >= thresholds.bottomThreshold) {
+                    sidebar.classList.add('hidden');
+                }
+            }
+
+            function init() {
+                calculateThresholds();
+
+                window.addEventListener('scroll', handleScroll);
+
+                window.addEventListener('resize', function () {
+                    calculateThresholds();
+                    handleScroll();
+                });
+            }
+
+            init();
+        })
+
+    </script>
+</body>
+
+</html>
